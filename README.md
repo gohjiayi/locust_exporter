@@ -41,15 +41,22 @@ This package is available for Docker:
     ```
 
 4. Add dashboard to Grafana with ID [11985](https://grafana.com/grafana/dashboards/11985)
+> Note: With additional changes made to the dashboard JSON file, instead of importing the dashboard with ID, consider importing the `locust_dashboard.json` file instead.
 
 ## Building and Running
 
 The default way to build is:
 
-```bash
+<!-- ```bash
 go get github.com/ContainerSolutions/locust_exporter
 cd ${GOPATH-$HOME/go}/src/github.com/ContainerSolutions/locust_exporter/
 go run main.go
+``` -->
+
+The current best way to execute:
+```bash
+go install github.com/gohjiayi/locust_exporter@latest
+./go/bin/locust_exporter.exe
 ```
 
 ### Flags
